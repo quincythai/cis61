@@ -1,0 +1,43 @@
+def final_strategy(score, opponent_score):
+    """
+    Figure out whether swapping or rolling an optimal dice would give a higher score
+    Return the number of rolls needed for whichever method gives more points
+    """
+
+    losing = score < opponent_score
+    difference = score - opponent_score
+
+    # my_dice = six_sided or four_sided
+    # my_dice = select_dice(score, opponent_score)
+    # Returns number of dice to roll for optimal score (uses swine swap and free bacon)
+
+    swap_rolls = swap_strategy(score, opponent_score) # can be 0
+
+    # How many number of rolls would give the optimal score?
+    # max_score_rolls = max_scoring_num_rolls(my_dice)
+
+    # Simulate turn and see score you get from swapping
+    # val_swap = take_turn(swap_rolls, opponent_score, my_dice)
+
+    # Get average score of rolling with the optimal dice
+    # avg_val_max_rolls = make_averaged(roll_dice, 1000)(max_score_rolls, my_dice)
+
+    # Does swapping give higher score than rolling with optimal dice?
+    #if val_swap > avg_val_max_rolls:
+        #my_strategy = swap_rolls
+    #else:
+       #my_strategy = max_score_rolls
+
+    my_strategy = swap_rolls
+
+    if losing: # take bigger risks
+        return my_strategy
+    else: 
+        if my_dice == four_sided:
+            return randint(4, 6)
+        else:
+            return 5
+
+
+    # figure out how to make opponent score a multiple of 4
+    # if my dice is 4 sided, play conservative because higher chance of getting 1.
