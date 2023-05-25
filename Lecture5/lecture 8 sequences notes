@@ -1,0 +1,120 @@
+sequence = string, list, etc.
+
+can only concatenate sequences with sequences
+ex: strings + [a, b, c]
+but "school" + 1 fails
+or [a, b, c] + 1 fails
+
+cannot change string value
+school = "Laney College"
+school[0] = B
+fails.
+
+school[start::end::skip]
+school[::-1]
+egelloC yenaL
+
+len(sequence)
+len(string)
+
+
+lst1 = [2, 3, 5, 7, 11, 13, 17, 19] # size = 8
+for i in range(len(lst1)):
+	print(lst1[i])
+
+>>> range(6)
+range(0, 6)
+>>> list(range(len(lst1))) # len = 8, range(8) = range(0, 8)
+[0, 1, 2, 3, 4, 5, 6, 7]
+
+>>> list(range(5, 10)) 
+[5, 6, 7, 8, 9]
+
+>>> list(range(5, 20, 2))
+[5, 7, 9, 11, 13, 15, 17, 19]
+
+>>> list(range(20, 5, -1))
+[20, 19, 18 ... 7, 6] # doesn't include 5.
+
+
+for i in [0, 1, 2, 3] == for i in range(4)
+
+list(range(20, 5, 1)) does not work because no number between 20 and 5 in the + direction
+
+for i in range(20, 5, -1)
+
+
+lst1 = [2,3,5,7,11]
+lst1 * 2 = [2,3,5,7,11,2,3,5,7,11] # just repeats it
+
+
+for elem in lst1:
+	lst2 += [elem * elem]
+
+OR we can do
+
+lst3 = [elem * elem for elem in lst1]
+>>> lst3
+[4, 9, 25, 49, 121]
+
+
+>>> [i for i in range(100) if i % 2 == 0]
+[0, 2, 4, 6 ... 96, 98]
+
+>>> [i*i for i in range(100) if i % 2 == 0]
+[0, 4, 16, 36... 9216, 9604]
+
+
+>>>[ch + "0"] for ch in "irfan"]
+['i0', 'r0', 'f0', 'a0', 'n0']
+
+------------------------------
+
+
+d = {}
+type(d) will print <class 'dict'>
+d = {0: "hello", 1: "world"}
+>>> d[0]
+hello
+>>> d[1]
+world
+
+>>> user = {"name": "irfan", "username": "iortak", "pass":"123"}
+>>> user["name"]
+'irfan'
+
+>>> user["pass"] = "ab123"
+>>> user
+>>> user = {"name": "irfan", "username": "iortak", "pass":"abc123"}
+
+
+>>> user["email"] will fail because no email exists!
+>>> user["email"] = "iortak@peraltal.edu"
+
+>>> d.items()
+dict_items([(0, 'hello'), (1, 'world')])
+
+>>> user.items()
+dict_items([('name', 'irfan'), ('username', 'iortak'), ('pass', 'abc123'), ('email', 'iortak@peralta.edu')])
+
+>>> user.keys()
+dict_keys(['name', 'username', 'pass', 'email'])
+
+>>> user.values()
+dict_values(['irfan', 'iortak', 'abc123', 'iortak@peralta.edu'])
+
+for k, v in user.items():
+	print("key: " + k, "value: " + v)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+Lecture11 Notes
+
+Data abstraction - think about compound values as objects
+	EX: date has month/day/year
+
+Compound values - mutable (can change over time)
+	EX: dates can change
+
+to_five = [1, 2, 3, 4, 5] 
+to_four = to_five[:4] # new list
+to_six = to_five # points
+to_six = to_five + [6] # new list
+to_neg_five = [-x for x in to_five] # new list
+same = to_five # points
+
+queue = ["a", "b"]
+q = queue[:] # new list
+
+List Mutation
+append(el) adds el to end of list
+insert(i, el) insert el at index i

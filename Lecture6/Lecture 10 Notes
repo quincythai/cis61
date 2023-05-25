@@ -1,0 +1,105 @@
+Sequence Aggregation
+
+Iterable - an object that can return its members one at a time
+	EX: all sequences (lists, strings, tuples), some non-sequence (dictionaries)
+
+Some built-in functions take iterable arguments and combine them into a value
+
+sum(iterable[, start]) -> value
+	Return sum of an iterable of numbers + 'start' (default 0)
+	When iterable is empty, return start
+	does NOT work on strings
+
+max(iterable[, key=func]) -> value OR max(a, b, c ... [,key=func]) -> value
+	With single iterable argument, return largest item
+	With multiple, return largest argument
+
+min as well
+
+----------------------------
+
+sum([1, 2, 3]) --> 6
+sum(1, 2, 3, 10) fails because sum() takes at most 2 arguments
+sum([[1], [2] [3]]) --> [1, 2, 3]
+sum([[1], [2] [3]], [0]) --> [0, 1, 2, 3]
+
+sum(['a', 'b', 'c', 'd']) does NOT work (string)
+
+Instead use ''.join(seq)
+
+"".join(['a','b','c','d']) --> 'abcd'
+
+"-".join("") --> 'a-b-c-d'
+
+max([1,2,3,4,5]) --> 5
+
+max([-4,-3,-2,-1,0,1,2,3], key=lambda x: abs(x))
+max is 3, but key is abs(-4) = 4
+returns original value whose abs value is the greatest (-4)
+
+max([-4,-3,-2,-1,0,1,2,3], key=abs)
+max([-4,-3,-2,-1,0,1,2,3], key=lambda x: x*x) -> -4
+min([-4,-3,-2,-1,0,1,2,3], key=lambda x: x*x) -> 0
+
+bool(any_value) -> bool
+	Takes in any value (not just iterables)
+	and returns True if value is True and False if False value
+
+all(iterable) -> bool
+	Return True if ALL values True for bool(x)
+
+any(iterable) -> bool
+	Returns True if at least 1 value is True for bool(x)
+	If empty, return False.
+
+bool("2") -> True
+bool([2]) -> True
+bool([2,0,5]) -> True # only if list has stuff
+bool([False]) -> True
+bool([False, False]) -> True
+
+all([]) -> True
+all([False]) -> False
+all([False, True]) -> False
+
+any([False, True]) -> True
+any([False, False]) -> False
+
+Tree Processing Uses Recursion
+	Base case: simplest version of problem, many times its leaf (not always)
+	Recursive call on smaller subproblems, many times it branches (not always)
+	Use recursive call with some type of combination to get final solution
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

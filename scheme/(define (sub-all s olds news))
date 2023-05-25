@@ -1,0 +1,17 @@
+function sub-all(s, olds, news):
+    function sub-all-helper(s, olds, news):
+        if s is empty:
+            return empty list
+        else if first element of s is an old word:
+            replace the old word with the corresponding new word
+            recursively call sub-all-helper with the rest of s, olds, and news
+        else:
+            keep the current element and recursively call sub-all-helper with the rest of s, olds, and news
+    end function
+    return sub-all-helper(s, olds, news)
+end function
+
+
+(define (sub-all s olds news)
+    (cond (null? s) '())
+        ((member (car s) olds) (cons (car news))
